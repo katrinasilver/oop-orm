@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-const Theatre = require('../../src/models/theatre')
+const Theatre = require('../../src/models/Theatre')
 
 describe('Theatre Model', function () {
   beforeEach(() => global.knex.seed.run())
@@ -166,7 +166,7 @@ describe('Theatre Model', function () {
     it('should return true if the created theatre is valid', function () {
       const name = 'My New Name'
       const address = 'My New Address'
-      
+
       const theatre = new Theatre({ name, address })
       expect(theatre.valid).to.be.true
     })
